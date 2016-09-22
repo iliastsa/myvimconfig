@@ -54,6 +54,11 @@ endif
 
 set rnu
 
+:set expandtab
+:set tabstop=4
+:set shiftwidth=4
+:set scrolloff=3 "3 lines below and above cursor
+
 "Ctrl-p
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
