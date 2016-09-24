@@ -54,16 +54,26 @@ endif
 
 set rnu
 
-:set expandtab
-:set tabstop=4
-:set shiftwidth=4
-:set scrolloff=3 "3 lines below and above cursor
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set scrolloff=3 "3 lines below and above cursor
+set encoding=utf-8
 
 "Ctrl-p
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+"set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 "Pathogen 
 execute pathogen#infect()
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -79,10 +89,8 @@ let g:airline#extensions#branch#enabled=1
 let g:airline_powerline_fonts = 1
 
 "Vim theme
-let g:solarized_termcolors=16
+let g:solarized_termcolors=16  
 syntax enable
 set background=dark
 colorscheme solarized
-
-set t_Co=256
-
+set t_Co=16
